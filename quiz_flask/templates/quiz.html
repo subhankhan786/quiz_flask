@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <head><link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+    </head>
+  <main class="quiz-container">
+    <div class="quiz-question">
+      <h1>CAPITAL OF {{ question[0].upper(  ) }}</h1>
+    </div>
+    
+    <form class="quiz-form" method="post" action="/submit_answer">
+      {% for answer in selected_answers %}
+        <button type="submit" name="user_answer" value="{{ answer }}">{{ answer }}</button>
+      {% endfor %}
+      <input type="hidden" name="correct_answer" value="{{ correct_answer }}">
+      <input type="hidden" name="current_score" value="{{ score }}">
+    </form>
+    
+    <div class="score-container">
+      {% if score != 0 %}
+      <h1>Score: {{ score }}</h1>
+      {% endif %}
+    </div>
+  </main>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+  </head>
+  <main>
+    <div class="quiz-intro">
+      <h1>Welcome, Quiz Masters!</h1>
+      <p>Ready to put your brain to the test? We've got a challenging quiz waiting for you...</p>
+    </div>
+    <div class="quiz-image">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Intriguing image related to your quiz theme">
+    </div>
+    <div class="quiz-description">
+      <p>This quiz will cover countries and capitals and test your knowledge on geography. Are you ready to show off your expertise?</p>
+    </div>
+    <div class="start-quiz-btn-container">
+      <a href="{{url_for('quiz')}}" class="start-quiz-btn">Start Quiz!</a>
+    </div>
+  </main>
+{% endblock %}

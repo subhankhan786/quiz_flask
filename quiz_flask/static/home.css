@@ -1,0 +1,75 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Match the background color of the overall page */
+}
+
+/* ... existing styles ... */
+
+/* CSS for quiz homepage */
+main {
+  max-width: 800px;
+  margin: 100px auto;  /* Adjust margin to center the main content on the page */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #f5f5f5;  /* Match the background color of the overall page */
+}
+
+.quiz-intro h1,
+.quiz-intro p,
+.quiz-description p {
+  color: #000; /* Match the text color of the header */
+}
+
+.quiz-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-left: 50%; /* Center the image horizontally */
+  transform: translateX(-50%); /* Adjust to center properly */
+}
+
+.start-quiz-btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.start-quiz-btn {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;  /* Match the text color of the header */
+  background-color: #007bff;  /* Match the button color of the header */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Added color transition */
+}
+
+.start-quiz-btn:hover {
+  background-color: #0056b3;  /* Match the hover color of the header */
+  color: #fff;  /* Match the text color of the header on hover */
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 600px) {
+  main {
+      margin: 20px; /* Adjust margin for smaller screens */
+  }
+
+  .quiz-image img {
+      width: 80px; /* Adjust the image size for smaller screens */
+      height: 80px;
+      margin-top: 20px;
+      margin-left: 50%; /* Center the image horizontally */
+      transform: translateX(-50%); /* Adjust to center properly */
+  }
+
+  .start-quiz-btn {
+      padding: 15px 30px; /* Adjust button padding for smaller screens */
+      font-size: 18px;
+  }
+}
